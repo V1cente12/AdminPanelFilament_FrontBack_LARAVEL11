@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use Doctrine\DBAL\Schema\Schema;
+use Illuminate\Support\Facades\Schema as FacadesSchema;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -19,6 +21,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        FacadesSchema::defaultStringLength(191);
     }
 }
